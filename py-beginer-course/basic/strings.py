@@ -12,12 +12,17 @@ name = "Manisha"
 # using variable in a function :- if we want space, we can add empty "".
 print(greetings + " " + name)
 
-age = 27
+age = 24
 print(age)
 # re-bounding  age and changing datatype:-
 # age = "27 years"
-age_in_string = "27 years"
+age_in_string = "27"
 
 print(type(age))
 # python cannot concatenate with integers , age var had int datatype.
-print(name + " is " + age_in_string + " old ")
+print(name + f" is {age} years old ")
+
+# formatting and floating---
+print(f"Pi is approximately{22/7 :12.50f}")
+pi = 22/7
+print(f"Pi is approximately{pi :12.50f}")
