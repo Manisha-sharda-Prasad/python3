@@ -5,8 +5,8 @@ print("Please think a no. between {} and {}".format(low, high))
 input("press enter to start!!")
 
 guesses = 1
-while True:
-    print("\tGuessing in the range of {} to {}".format(low, high))
+while low != high:
+    # print("\tGuessing in the range of {} to {}".format(low, high))
     guess = low + (high-low) // 2                    # formula to calculate the midpoint b/w the low and high values
     high_low = input("My guess is {}. Should I guess high or low? "
                      "Enter h, l or c if my guess is correct ".format(guess)).casefold()
@@ -23,3 +23,6 @@ while True:
         print(" ")
     # guesses = guesses + 1
     guesses += 1
+else:
+    print("You thought of the number {}".format(low))
+    print(" I got it in {} guesses!".format(guesses))
